@@ -7,6 +7,11 @@ import Loadable from 'ui-component/Loadable';
 // dashboard routing
 const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')));
 
+// cadastros routing
+const Fornecedor = Loadable(lazy(() => import('views/cadastros/pessoa/Fornecedor')));
+const Cliente = Loadable(lazy(() => import('views/cadastros/pessoa/Cliente')));
+const Produto = Loadable(lazy(() => import('views/cadastros/Produto')));
+
 // utilities routing
 const UtilsTypography = Loadable(lazy(() => import('views/utilities/Typography')));
 const UtilsColor = Loadable(lazy(() => import('views/utilities/Color')));
@@ -30,6 +35,18 @@ const MainRoutes = {
         {
             path: '/dashboard/default',
             element: <DashboardDefault />
+        },
+        {
+            path: '/cadastros/pessoa/fornecedor',
+            element: <Fornecedor />
+        },
+        {
+            path: '/cadastros/pessoa/cliente',
+            element: <Cliente />
+        },
+        {
+            path: '/cadastros/produto',
+            element: <Produto />
         },
         {
             path: '/utils/util-typography',
